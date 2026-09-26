@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About - AI Library</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+  <div id="navbar-public" style="display:none"></div>
+  <div id="navbar"></div>
+  <main>
+    <section class="page-head"><div class="container">
+      <h1>About AI Library</h1>
+      <p>A short guide to what this platform does and how the recommendations are calculated.</p>
+    </div></section>
+    <section><div class="container" style="max-width:760px">
+      <div class="card about-block card-pad">
+        <h2>What is AI Library?</h2>
+        <p>AI Library is a final-year BCA project: a personalized book recommendation system for a college
+        library. Instead of showing every student the same catalogue, it ranks books using each student's
+        interests, subjects and reading history.</p>
+      </div>
+      <div class="card about-block card-pad">
+        <h2>How recommendations work</h2>
+        <p>The system uses <strong>content-based filtering</strong>. Every book's category, subject, keywords and
+        description are converted into a weighted text profile, and so is the student's interests, subjects and
+        previously selected books.</p>
+        <p><strong>TF-IDF</strong> (Term Frequency - Inverse Document Frequency) scores each word: common words
+        like "book" get a low weight, while rare, meaningful words like "pointers" or "cosine" get a higher weight.
+        <strong>Cosine similarity</strong> then measures how closely the student's profile and a book's profile
+        point in the same direction, from 0 (no overlap) to 1 (identical). The five books with the highest score
+        are shown, combining interests (70%) and reading history (30%) once a student has selected books before.</p>
+      </div>
+      <div class="card about-block card-pad">
+        <h2>AWS cloud architecture</h2>
+        <p>The frontend is static HTML/CSS/JS hosted on Amazon S3. Every request goes through Amazon API Gateway to
+        an AWS Lambda function written in Python, which reads and writes Amazon DynamoDB (students, books, reading
+        history) and Amazon S3 (dataset and cover images). An IAM role gives Lambda only the permissions it needs.</p>
+      </div>
+      <div class="card about-block card-pad">
+        <h2>Privacy and security</h2>
+        <p>Sign in on this demo is a browser-only convenience layer for navigating the multi-page app; it is not a
+        production authentication system and should not be used with a real password you reuse elsewhere. The
+        student profile (interests, subjects) is stored in DynamoDB through the real backend API.</p>
+      </div>
+      <div class="card about-block card-pad">
+        <h2>Contact / Help</h2>
+        <p>This is an academic project. For questions about how it works, see <a href="dashboard.html">the dashboard</a>
+        or the project's <code>docs/</code> folder (architecture, API documentation, and viva questions).</p>
+      </div>
+    </div></section>
+  </main>
+  <footer><div id="footer" class="container"></div></footer>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    // About page is viewable both signed-in (shows the app nav) and signed-out (from the landing page).
+    if (Auth.isLoggedIn()) {
+      const s = document.createElement("script"); s.src = "js/nav.js";
+      s.onload = () => initShell("about");
+      document.body.appendChild(s);
+    } else {
+      document.getElementById("navbar").innerHTML = `
+        <nav class="topnav"><div class="container">
+          <a class="brand" href="index.html"><span class="mark">AI</span>Library</a>
+          <div class="nav-links" style="display:flex;position:static;box-shadow:none;border:none;padding:0;margin-left:auto"><a href="about.html" class="active">About</a></div>
+          <div class="nav-user" style="gap:.6rem"><a class="btn btn-outline btn-sm" href="login.html">Sign In</a><a class="btn btn-sm" href="signup.html">Create Account</a></div>
+        </div></nav>`;
+      document.getElementById("footer").innerHTML = "AI Library &middot; Final Year BCA Project";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Runtime packages needed by the Lambda function.
+# boto3 is ALREADY included in the AWS Lambda Python runtime, so you do NOT
+# need to upload it. The recommendation engine uses only the Python standard
+# library (no numpy / scikit-learn) so the ZIP stays tiny and deployment is easy.
+#
+# Only install this file if you want to run the code against real AWS from your PC:
+boto3>=1.34

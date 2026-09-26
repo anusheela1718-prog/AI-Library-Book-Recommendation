@@ -1,0 +1,13 @@
+/* dashboard.css - dashboard.html */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1.4rem 0 2.2rem; }
+.stat-card { padding: 1.2rem 1.3rem; }
+.stat-card .num { font-family: Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--ink); }
+.stat-card .label { color: var(--muted); font-size: .88rem; }
+.welcome-banner { background: linear-gradient(135deg, #142033, #1f4fa3); color: #fff; border-radius: var(--radius-lg); padding: 2rem 2.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.welcome-banner h1 { color: #fff; margin-bottom: .3rem; }
+.welcome-banner p { color: #d7e0f4; margin: 0; max-width: 50ch; }
+.welcome-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+.welcome-banner .btn-outline { color: #fff; border-color: rgba(255,255,255,.6); }
+.welcome-banner .btn-outline:hover { background: rgba(255,255,255,.14); }
+.mini-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; }
+@media (max-width: 700px) { .welcome-banner { flex-direction: column; align-items: flex-start; } }

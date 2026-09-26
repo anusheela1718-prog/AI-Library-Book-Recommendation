@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Library - Personalized Book Recommendations</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body" style="background:none">
+  <nav class="topnav"><div class="container">
+    <a class="brand" href="index.html"><span class="mark" style="background:var(--brand)">AI</span>Library</a>
+    <div class="nav-links" style="display:flex;position:static;box-shadow:none;border:none;padding:0;margin-left:auto">
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-user" style="gap:.6rem">
+      <a class="btn btn-outline btn-sm" href="login.html">Sign In</a>
+      <a class="btn btn-sm" href="signup.html">Create Account</a>
+    </div>
+  </div></nav>
+
+  <header class="landing-hero">
+    <div class="container">
+      <div>
+        <p class="tag-line">AI-BASED LIBRARY BOOK RECOMMENDATION SYSTEM</p>
+        <h1>Find your next book in seconds, not scrolls.</h1>
+        <p class="lead">AI Library reads your interests, subjects and reading history, then ranks every book with a
+        content-based recommendation engine so you always open the right one first.</p>
+        <div class="landing-actions">
+          <a class="btn btn-lg" style="background:var(--accent);border-color:var(--accent);color:var(--ink)" href="signup.html">Create Account</a>
+          <a class="btn btn-lg btn-outline" style="color:#fff;border-color:rgba(255,255,255,.6)" href="login.html">Sign In</a>
+        </div>
+      </div>
+      <div class="landing-shelf" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </header>
+
+  <section class="landing-features"><div class="container">
+    <h2>How it works</h2>
+    <div class="feature-grid">
+      <div class="card card-pad"><span class="num">1</span><h3>Tell us your interests</h3><p>Pick subjects like Java, AI or Cloud Computing when you sign up.</p></div>
+      <div class="card card-pad"><span class="num">2</span><h3>Get ranked recommendations</h3><p>TF-IDF and cosine similarity score every book against your profile.</p></div>
+      <div class="card card-pad"><span class="num">3</span><h3>Read and refine</h3><p>Selecting books teaches the engine what you actually like next time.</p></div>
+    </div>
+  </div></section>
+
+  <footer><div id="footer" class="container">AI Library &middot; Final Year BCA Project</div></footer>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    // A returning, already-signed-in visitor can skip straight to the dashboard.
+    if (Auth.isLoggedIn()) document.querySelector('a[href="login.html"]').textContent = "Go to Dashboard", document.querySelector('a[href="login.html"]').href = "dashboard.html";
+  </script>
+</body>
+</html>

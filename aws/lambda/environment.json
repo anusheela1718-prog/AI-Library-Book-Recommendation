@@ -1,0 +1,8 @@
+{
+  "Variables": {
+    "DYNAMODB_STUDENTS_TABLE": "Students",
+    "DYNAMODB_BOOKS_TABLE": "Books",
+    "DYNAMODB_HISTORY_TABLE": "ReadingHistory",
+    "S3_BUCKET_NAME": "YOUR-BUCKET-NAME"
+  }
+}

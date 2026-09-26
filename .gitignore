@@ -1,0 +1,17 @@
+.env
+*.zip
+build/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+.aws/
+credentials
+# IDE / OS
+.vscode/
+.idea/
+*.log
+
+# Local/runtime data
+backend/*.local.json
+backend/local_*.json

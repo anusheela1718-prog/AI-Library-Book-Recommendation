@@ -1,0 +1,132 @@
+[
+  {
+    "studentId": "ST001",
+    "name": "Aarav Kumar",
+    "department": "BCA",
+    "year": "3",
+    "interests": [
+      "Java",
+      "Programming"
+    ],
+    "subjects": [
+      "Programming"
+    ]
+  },
+  {
+    "studentId": "ST002",
+    "name": "Diya Sharma",
+    "department": "BCA",
+    "year": "3",
+    "interests": [
+      "Machine Learning",
+      "AI"
+    ],
+    "subjects": [
+      "Artificial Intelligence"
+    ]
+  },
+  {
+    "studentId": "ST003",
+    "name": "Rahul Nair",
+    "department": "BCA",
+    "year": "2",
+    "interests": [
+      "Web Development",
+      "JavaScript"
+    ],
+    "subjects": [
+      "Web Development"
+    ]
+  },
+  {
+    "studentId": "ST004",
+    "name": "Sana Fathima",
+    "department": "BCA",
+    "year": "3",
+    "interests": [
+      "Cyber Security"
+    ],
+    "subjects": [
+      "Cyber Security",
+      "Networking"
+    ]
+  },
+  {
+    "studentId": "ST005",
+    "name": "Vishal Reddy",
+    "department": "BCA",
+    "year": "1",
+    "interests": [
+      "Python",
+      "Data Science"
+    ],
+    "subjects": [
+      "Data Science"
+    ]
+  },
+  {
+    "studentId": "ST006",
+    "name": "Lavanya Iyer",
+    "department": "BCA",
+    "year": "2",
+    "interests": [
+      "Database",
+      "SQL"
+    ],
+    "subjects": [
+      "Databases"
+    ]
+  },
+  {
+    "studentId": "ST007",
+    "name": "Mohan Raj",
+    "department": "BCA",
+    "year": "3",
+    "interests": [
+      "Cloud Computing",
+      "AWS"
+    ],
+    "subjects": [
+      "Cloud Computing"
+    ]
+  },
+  {
+    "studentId": "ST008",
+    "name": "Keerthi Suresh",
+    "department": "BCA",
+    "year": "1",
+    "interests": [
+      "C",
+      "Programming"
+    ],
+    "subjects": [
+      "Programming"
+    ]
+  },
+  {
+    "studentId": "ST009",
+    "name": "Farhan Ali",
+    "department": "BCA",
+    "year": "2",
+    "interests": [
+      "Software Engineering"
+    ],
+    "subjects": [
+      "Software Engineering"
+    ]
+  },
+  {
+    "studentId": "ST010",
+    "name": "Nisha Thomas",
+    "department": "BCA",
+    "year": "3",
+    "interests": [
+      "Data Science",
+      "Machine Learning"
+    ],
+    "subjects": [
+      "Data Science",
+      "Artificial Intelligence"
+    ]
+  }
+]

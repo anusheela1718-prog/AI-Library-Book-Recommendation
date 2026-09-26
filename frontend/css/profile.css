@@ -1,0 +1,11 @@
+/* profile.css - profile.html, about.html */
+.profile-head { display: flex; align-items: center; gap: 1.2rem; padding: 1.6rem; }
+.profile-head .avatar-lg { width: 68px; height: 68px; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; font-size: 1.5rem; font-weight: 700; font-family: Georgia, serif; }
+.profile-head .id { color: var(--muted); font-size: .9rem; }
+.profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.4rem; }
+dl.profile-list { display: grid; grid-template-columns: 130px 1fr; gap: .6rem 1rem; margin: 0; }
+dl.profile-list dt { font-weight: 700; font-size: .85rem; color: var(--muted); }
+dl.profile-list dd { margin: 0; }
+.about-block { padding: 1.6rem; margin-bottom: 1.1rem; }
+.about-block h2 { font-size: 1.15rem; }
+@media (max-width: 760px) { .profile-grid { grid-template-columns: 1fr; } .profile-head { flex-direction: column; text-align: center; } }

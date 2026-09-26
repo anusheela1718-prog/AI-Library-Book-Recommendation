@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DynamoDBTables",
+      "Effect": "Allow",
+      "Action": ["dynamodb:GetItem", "dynamodb:PutItem", "dynamodb:Scan", "dynamodb:Query"],
+      "Resource": [
+        "arn:aws:dynamodb:REGION:ACCOUNT_ID:table/Students",
+        "arn:aws:dynamodb:REGION:ACCOUNT_ID:table/Books",
+        "arn:aws:dynamodb:REGION:ACCOUNT_ID:table/ReadingHistory",
+        "arn:aws:dynamodb:REGION:ACCOUNT_ID:table/ReadingHistory/index/studentId-index"
+      ]
+    },
+    {
+      "Sid": "S3DatasetAndModel",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:PutObject"],
+      "Resource": [
+        "arn:aws:s3:::YOUR-BUCKET-NAME/dataset/*",
+        "arn:aws:s3:::YOUR-BUCKET-NAME/model/*"
+      ]
+    }
+  ]
+}
